@@ -1,70 +1,10 @@
-# Getting Started with Create React App
+# Atomz
+# What is it?
+Atomz is a strategy board game for 2 players. Each of the cells on the 8x8 board can be filled up with a certain number of atoms. The corners can hold a maximum of 2 atoms, the edges a maximum of 3, and the middle pieces a maximum of 4. If a cell is at its maximum capacity, adding another atom to the cell will cause it to explode, sending one atom into every adjacent cell. Players take turns adding a single atom to a cell of their choosing. Once a player owns a cell, the other player cannot add their atom directly into it. However, if an explosion caused by one player sends an atom of their color into an enemy cell, that cell is converted. The game ends when one player controls the entire board. 
+# Why did I make it?
+When I was in junior high school, my friends and I would play a game that was very similar to this one on our tablets. i was recently searching for it and saw that it had been taken down, so I decided I would remake the game for the sake of nostalgia.
+# How did I make it?
+This game was made purely using React.js. However, I eventually plan on adding an online multiplayer and/or LAN feature, which will require other libraries. 
+# What I'm proud of
+Implementing the logic behind explosions ended up being more difficult than I thought. I used a breadth-first search technique to determine how an explosion would radiate from the center(where the player clicked). However, I wanted the player's to be able to see the explosion propogating throughout the board. In order to do this, I needed to count each time a new level was reached in the breadth-first search. To do this, I implemented a double queue approach. This way, each time a queue was fully emptied, I knew that a new level of explosions had begun, so I could animate between these levels. On a lower-level, I really like the logo I made for the game, with the refrence to lewis dot structures between the two o's. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
