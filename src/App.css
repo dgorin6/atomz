@@ -1,38 +1,213 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+}
+.title {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  width: 13vw;
+  height: 13vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr;
+  row-gap: 0;
+  padding-bottom: 2vw;
+}
+.title__1{
+  color: rgb(21, 94, 21);
+  display: flex;
+  justify-content: right;
+}
+.title__2{
+  color: rgb(223, 65, 17);
+  display: flex;
+  justify-content: center;
+}
+.title__3{
+  color: rgb(41, 17, 201);
+  display: flex;
+  justify-content: center;
+}
+.title__4{
+  color: rgb(223, 65, 17);
+  display: flex;
+  justify-content: center;
+  grid-row: 2;
+  grid-column: 2;
+}
+.title__5{
+  color: rgb(223, 65, 17);
+  display: flex;
+  justify-content: center;
+  align-items: centers;
+  grid-row: 3;
+  grid-column: 2;
+}
+.main {
+  width: 100% ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.win_player_1 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 8vw;
+  color:rgb(21, 94, 21);
+}
+.win_player_2 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 8vw;
+  color: red;
+}
+.no__winner{
+  opacity: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 9vw;
+}
+.new__game {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 10vw;
+  background-color: rgba(87, 87, 123, 0.953);
   color: white;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
 }
-
-.App-link {
-  color: #61dafb;
+.new__game:hover {
+  transform: scale(1.2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board {
+  justify-self: center;
+  padding-bottom: 2vh;
+  width: 80vh;
+  height: 80vh;
+  display: grid;
+  margin: 0;
+  grid-template-rows: repeat(8,10vh);
+  grid-template-columns: 10vh;
+}
+.board-row{
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(8,10vh);
+  grid-template-rows: 10vh;
+}
+.player__1 {
+  border-width: 0.001rem;
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  color: green;
+  background-color: aliceblue;
+  font-size: 3vh;
+  justify-content: center;
+  align-items: center;
+}
+.player__2 {
+  border-width: 0.001rem;
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  color: red;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+}
+.not__taken {
+  background-color: aliceblue;
+  border-radius: 0;
+  border-width: 0.001rem;
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  justify-content: center;
+  align-items: center;
+}
+.circles_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.circles_2_0{
+  padding: 0.3vh;
+}
+.circles_2_1{
+  padding: 0.3vh;
+}
+.circles_3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.circles_3_0{
+  padding: 0.3vh;
+}
+.circles_3_1{
+  padding: 0.3vh
+}
+.circles_4{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.circles_4_0 {
+  width: 100%;
+  height: 3vh;
+  padding: 0 1vw;
+}
+.circles_4_1 {
+  height: 3vh;
+  padding: 0 0.43vw;
+}
+.circles_4_2 {
+  height: 3vh;
+  padding: 0 0.43vw;
+}
+.circles_4_3 {
+  height: 3vh;
+  padding: 0 50% 0 50%;
+}
+.circles_5 {
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+}
+.circles_5_0 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.circles_5_1 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.circles_5_2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+.circles_5_3 {
+  grid-row: 2;
+  grid-column: 3;
+}
+.circles_5_4 {
+  grid-row: 3;
+  grid-column: 2;
+}
+.board {
+  display: grid;
+  font-size: 0;
+}
+.None {
+  opacity: 0;
 }
