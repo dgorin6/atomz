@@ -1,8 +1,6 @@
 import Board from "./Board"
 import React from 'react'
-import { useState } from "react"
 import { Component } from "react";
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
 
 const sleep = ms => new Promise(
   resolve => setTimeout(resolve, ms)

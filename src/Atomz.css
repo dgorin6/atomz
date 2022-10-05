@@ -1,4 +1,4 @@
-.App {
+.Atomz {
   display: flex;
   align-items: center;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -154,14 +154,13 @@
 .circles_3_1{
   padding: 0.3vh
 }
-.circles_4{
+.circles_4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .circles_4_0 {
-  width: 100%;
   height: 3vh;
   padding: 0 1vw;
 }
@@ -175,7 +174,7 @@
 }
 .circles_4_3 {
   height: 3vh;
-  padding: 0 50% 0 50%;
+  padding: 0 1vw;
 }
 .circles_5 {
   display: grid;
