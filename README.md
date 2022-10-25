@@ -5,5 +5,7 @@ Atomz is a strategy board game for 2 players. Players take turns adding a single
 When I was in junior high school, my friends and I would play a game that was very similar to this one on our tablets. I was recently searching for it and saw that it had been taken down, so I decided I would remake the game for the sake of nostalgia.
 # How did I make it?
 This game was made purely using React.js. However, I eventually plan on adding an online multiplayer and/or LAN feature, which will require other libraries. 
+Note: The online version of the game is now live, please visit https://github.com/dgorin6/atomz-online for more information.
 # Technical Details
 Calculating the explosion propogation proved to be somewhat difficult. I used a breadth-first search technique to determine how an explosion would radiate from the center(where the player clicked). However, I wanted the player's to be able to see the explosion propogating throughout the board. In order to do this, I needed to count each time a new level was reached in the breadth-first search. To do this, I implemented a double queue approach. This way, each time a queue was fully emptied, I knew that a new level of explosions had begun, so I could animate between these levels. 
+
